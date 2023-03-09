@@ -23,7 +23,7 @@ const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("Connection done...");
 });
-
-app.listen(process.env.PORT, () => {
-  console.log("listeneing on port", process.env.PORT);
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log("listening on port",PORT);
 });
